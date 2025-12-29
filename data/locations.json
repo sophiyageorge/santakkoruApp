@@ -1,0 +1,56 @@
+[
+  {
+    "city": "North Pole",
+    "lat": 84.0,
+    "lng": -30.0,
+    "recipient": "Santa's Workshop"
+  },
+  {
+    "city": "Tokyo, Japan",
+    "lat": 36.8,
+    "lng": 141.2,
+    "recipient": "Yuki"
+  },
+  {
+    "city": "London, UK",
+    "lat": 52.3,
+    "lng": -1.8,
+    "recipient": "Sophie"
+  },
+  {
+    "city": "Rome, Italy",
+    "lat": 41.6,
+    "lng": 14.8,
+    "recipient": "Giulia"
+  },
+  {
+    "city": "Toronto, Canada",
+    "lat": 44.6,
+    "lng": -81.2,
+    "recipient": "Noah"
+  },
+  {
+    "city": "Los Angeles, USA",
+    "lat": 35.8,
+    "lng": -120.8,
+    "recipient": "Emma"
+  },
+  {
+    "city": "Mexico City, Mexico",
+    "lat": 20.2,
+    "lng": -100.2,
+    "recipient": "Carlos"
+  },
+  {
+    "city": "Buenos Aires, Argentina",
+    "lat": -35.2,
+    "lng": -59.8,
+    "recipient": "Sofia"
+  },
+  {
+    "city": "Kochi, Kerala, India",
+    "lat": 9.95,
+    "lng": 76.55,
+    "recipient": "Brototype"
+  }
+]

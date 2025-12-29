@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANTAKKORU 🎄 Santa Live Tracker</title>
+
+  <!-- LEAFLET MAP CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- <header>
+    🎅 SANTAKKORU – Santa Live Control Center 🎄
+  </header> -->
+
+  <!-- FLOATING NAVIGATION -->
+  <nav class="floating-nav">
+    <a href="#santa-animation" title="Santa Arrival">🎅</a>
+    <a href="#progress-section" title="Delivery Progress">📦</a>
+    <a href="#greetings-slider" title="Greetings">🎄</a>
+    <a href="#map-section" title="Live Map">🗺️</a>
+    <a href="#gift-wheel" title="Spin Wheel">🎡</a>
+    <a href="#bible-quotes" title="Bible Verses">📖</a>
+  </nav>
+
+  <!-- SECTIONS -->
+
+  <!-- 1. HERO / VIDEO -->
+  <section id="santa-animation">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="assets/santa_bg.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>🎅 Santa is Coming!</h1>
+      <!-- <p>Live Tracking Dashboard Initialized...</p> -->
+    </div>
+  </section>
+
+  <!-- 2. PROGRESS -->
+  <section id="progress-section">
+    <h2>🎁 Santa Delivery Progress</h2>
+    <div class="progress-box">
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="progress-text">Waiting for satellite data...</p>
+    </div>
+  </section>
+
+  <!-- 3. SLIDER -->
+  <section id="greetings-slider">
+    <div class="slider-container">
+      <div class="slider-track" id="slider-track">
+        <!-- Slides injected by JS -->
+      </div>
+      <div class="slider-controls">
+        <button id="prevBtn">❮</button>
+        <button id="nextBtn">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MAP -->
+  <section id="map-section">
+    <h2>🗺️ Santa Live Tracker</h2>
+    <div id="map"></div>
+  </section>
+
+  <!-- 5. WHEEL -->
+  <section id="gift-wheel">
+    <h2>🎡 Spin & Win a Gift</h2>
+    <div class="wheel-container">
+      <div id="wheel"></div>
+      <div class="stopper">🔻</div>
+    </div>
+    <button id="spinBtn" onclick="spin()">SPIN 🎁</button>
+  </section>
+
+  <!-- 6. QUOTES -->
+  <section id="bible-quotes">
+    <h2>📖 The Reason for the Season</h2>
+    <ul id="quotes"></ul>
+
+    <!-- DEVELOPER FOOTER -->
+    <footer>
+      <p>Developed by <strong>Mary Sophiya</strong> | 📧 <a href="mailto:mrsophiya@gmail.com">mrsophiya@gmail.com</a>
+      </p>
+    </footer>
+
+  </section>
+
+  <!-- LEAFLET JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
