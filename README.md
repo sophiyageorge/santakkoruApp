@@ -1,4 +1,4 @@
-# 🎅 Santakkoru - The Ultimate Christmas Companion 🎄
+# 🎅 Santa is Coming - The Ultimate Christmas Companion 🎄
 
 **Happy Christmas!** May your holidays be filled with joy and code! ✨
 
