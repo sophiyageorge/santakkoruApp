@@ -55,7 +55,7 @@ Due to browser security (CORS), you cannot just double-click `index.html`.
 
 ## 📸 Screenshots
 
-![App Screenshot](Blank 6 Grids Collage.png)
+![App Screenshot](pics.png)
 ---
 
 ## 👨‍� Developer Notes
