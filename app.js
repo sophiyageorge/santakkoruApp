@@ -110,39 +110,84 @@ function initializeApp() {
 
 
   // Expose spin globally for html button
-  window.spin = function () {
-    const spinBtn = document.getElementById("spinBtn");
-    if (spinBtn) {
-      spinBtn.disabled = true;
-      spinBtn.innerText = "Spinning...";
-    }
+  // window.spin = function () {
+    window.spin = function () {
+  const spinBtn = document.getElementById("spinBtn");
 
-
-    if (!wheel) {
-      console.error("Wheel element not found for spinning.");
-      if (spinBtn) {
-        spinBtn.disabled = false;
-        spinBtn.innerText = "SPIN AGAIN 🎁";
-      }
-      return;
-    }
-
-    // Random rotation between 3 to 6 full spins + random offset
-    const deg = Math.floor(1000 + Math.random() * 3000);
-
-    wheel.style.transition = 'transform 4s cubic-bezier(0.25, 1, 0.5, 1)';
-    wheel.style.transform = `rotate(${deg}deg)`;
-
-    setTimeout(() => {
-      if (spinBtn) {
-        spinBtn.disabled = false;
-        spinBtn.innerText = "SPIN AGAIN 🎁";
-      }
-      // Pick a random prize
-      const prize = prizes[Math.floor(Math.random() * prizes.length)];
-      alert(`🎉 You won a ${prize}! Merry Christmas! 🎅`);
-    }, 4000);
+  if (spinBtn) {
+    spinBtn.disabled = true;
+    spinBtn.innerText = "Spinning...";
   }
+
+  if (!wheel) return;
+
+  const segmentAngle = 360 / prizes.length;
+
+  // 3–6 full spins + random offset
+  const randomOffset = Math.random() * 360;
+  const totalRotation = 360 * 4 + randomOffset;
+
+  wheel.style.transition = "transform 4s cubic-bezier(0.25, 1, 0.5, 1)";
+  wheel.style.transform = `rotate(${totalRotation}deg)`;
+
+  setTimeout(() => {
+    // Normalize angle (0–360)
+    const finalAngle = totalRotation % 360;
+
+    /*
+      Wheel rotates clockwise.
+      Pointer is at top (270deg in CSS space).
+      So we adjust the angle.
+    */
+    const pointerAngle = (360 - finalAngle + 270) % 360;
+
+    // Determine prize index
+    const prizeIndex = Math.floor(pointerAngle / segmentAngle);
+    const prize = prizes[prizeIndex];
+
+    if (spinBtn) {
+      spinBtn.disabled = false;
+      spinBtn.innerText = "SPIN AGAIN 🎁";
+    }
+
+    // alert(`🎉 You won ${prize}! Merry Christmas 🎅`);
+  }, 4000);
+};
+
+
+    // **************************************************************** //
+  //   const spinBtn = document.getElementById("spinBtn");
+  //   if (spinBtn) {
+  //     spinBtn.disabled = true;
+  //     spinBtn.innerText = "Spinning...";
+  //   }
+
+
+  //   if (!wheel) {
+  //     console.error("Wheel element not found for spinning.");
+  //     if (spinBtn) {
+  //       spinBtn.disabled = false;
+  //       spinBtn.innerText = "SPIN AGAIN 🎁";
+  //     }
+  //     return;
+  //   }
+
+  //   // Random rotation between 3 to 6 full spins + random offset
+  //   const deg = Math.floor(1000 + Math.random() * 3000);
+
+  //   wheel.style.transition = 'transform 4s cubic-bezier(0.25, 1, 0.5, 1)';
+  //   wheel.style.transform = `rotate(${deg}deg)`;
+
+  //   setTimeout(() => {
+  //     if (spinBtn) {
+  //       spinBtn.disabled = false;
+  //       spinBtn.innerText = "SPIN AGAIN 🎁";
+  //     }
+  //     // Pick a random prize
+  //     const prize = prizes[Math.floor(Math.random() * prizes.length)];
+  //     alert(`🎉 You won a ${prize}! Merry Christmas! 🎅`);
+  //   }, 4000);
+  // }
 
 
   /* ================= BIBLE QUOTES ================= */
