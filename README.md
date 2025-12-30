@@ -53,6 +53,9 @@ Due to browser security (CORS), you cannot just double-click `index.html`.
 2.  **Run**: `python -m http.server 8000` (or use VS Code Live Server).
 3.  **Visit**: `http://localhost:8000`
 
+## 📸 Screenshots
+
+![App Screenshot](pics.png)
 ---
 
 ## 👨‍� Developer Notes
