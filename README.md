@@ -1,4 +1,4 @@
-# 🎅 Santakkoru - The Ultimate Christmas Companion 🎄
+# 🎅 Santa is Coming - The Ultimate Christmas Companion 🎄
 
 **Happy Christmas!** May your holidays be filled with joy and code! ✨
 
@@ -60,4 +60,4 @@ Due to browser security (CORS), you cannot just double-click `index.html`.
 - **Customization**: You can add more cities or change prizes easily by editing the JSON or JS arrays.
 
 **Merry Christmas & Happy Coding! 🚀**
-*Developed by a proud Brototype Learner*
+*Developed by a proud Brototype Learner Mary Sophiya*
